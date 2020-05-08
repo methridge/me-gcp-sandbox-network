@@ -1,6 +1,5 @@
 provider "google" {
-  version     = "~> 3.19"
-  credentials = file(var.creds)
+  version = "~> 3.19"
 }
 
 module "vpc" {
