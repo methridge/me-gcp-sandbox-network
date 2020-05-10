@@ -35,7 +35,7 @@ module "vpc" {
 
   routes = [
     {
-      name              = "egress-internet"
+      name              = "${var.username}-sandbox-egress-internet"
       description       = "route through IGW to access internet"
       destination_range = "0.0.0.0/0"
       tags              = "egress-inet"
