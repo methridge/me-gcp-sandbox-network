@@ -8,12 +8,14 @@ sandbox. Regions used are US-East4, US-Central1 and US-West3.
 - Create `terraform.tfvars` file
 
   ```hcl
-  creds           = "/Users/awesomeuser/.config/gcloud/creds/awesomeuser-creds.json"
   username        = "awesomeuser"
   project         = "awesomeuser-sandbox"
-  subnet-west3    = "10.13.0.0/20"
-  subnet-central1 = "10.13.16.0/20"
-  subnet-east4    = "10.13.32.0/20"
+  region-name-1   = "us-west1"
+  region-name-2   = "us-central1"
+  region-name-3   = "us-east1"
+  subnet-region-1 = "10.13.0.0/20"
+  subnet-region-2 = "10.13.16.0/20"
+  subnet-region-3 = "10.13.32.0/20"
   admin_ip        = ["200.200.100.100/32"]
   ```
 
@@ -21,22 +23,24 @@ sandbox. Regions used are US-East4, US-Central1 and US-West3.
 
 | Name            | Description                                      |     Type     | Required |
 | :-------------- | :----------------------------------------------- | :----------: | :------: |
-| creds           | Full path to your GCP credentials file           |    string    |   yes    |
 | username        | User name for access and to prefix all resources |    string    |   yes    |
 | project         | GCP Project name                                 |    string    |   yes    |
-| subnet-west3    | GCP Subnet for West-3 Region                     |    string    |   yes    |
-| subnet-central1 | GCP Subnet for Central-1 Region                  |    string    |   yes    |
-| subnet-east4    | GCP Subnet for East-4 Region                     |    string    |   yes    |
-| admin_ip        | Your public IP for direct access                 | list[string] |   yes    |
+| region-name-1   | GCP Name for first Region                        |    string    |   yes    |
+| region-name-2   | GCP Name for second region                       |    string    |   yes    |
+| region-name-3   | GCP Name for third region                        |    string    |   yes    |
+| subnet-region-1 | GCP Subnet for first Region                      |    string    |   yes    |
+| subnet-region-2 | GCP Subnet for second Region                     |    string    |   yes    |
+| subnet-region-3 | GCP Subnet for third Region                      |    string    |   yes    |
+| admin_ip        | Your public IP for direct access                 | list(string) |   yes    |
 
 ## Outputs
 
-| Name                         | Description                              |
-| :--------------------------- | :--------------------------------------- |
-| sandbox-network              | Self link to the created network         |
-| sandbox-subnet-west3         | Self link to the US-West3 subnet         |
-| sandbox-subnet-west3-cidr    | IP CIDR range for the US-West3 subnet    |
-| sandbox-subnet-central1      | Self link to the US-Central1 subnet      |
-| sandbox-subnet-central1-cidr | IP CIDR range for the US-Central1 subnet |
-| sandbox-subnet-east4         | Self link to the US-East4 subnet         |
-| sandbox-subnet-east4-cidr    | IP CIDR range for the US-East4 subnet    |
+| Name                         | Description                                |
+| :--------------------------- | :----------------------------------------- |
+| sandbox-network              | Self link to the created network           |
+| sandbox-subnet-region-1      | Self link to the first region subnet       |
+| sandbox-subnet-region-1-cidr | IP CIDR range for the first region subnet  |
+| sandbox-subnet-region-2      | Self link to the second region subnet      |
+| sandbox-subnet-region-2-cidr | IP CIDR range for the second region subnet |
+| sandbox-subnet-region-3      | Self link to the third region subnet       |
+| sandbox-subnet-region-3-cidr | IP CIDR range for the third region subnet  |

@@ -2,26 +2,26 @@ output sandbox-network {
   value = module.vpc.network_self_link
 }
 
-output sandbox-subnet-west3 {
-  value = module.vpc.subnets["us-west3/${var.username}-sandbox-subnet-west3"].self_link
+output sandbox-subnet-region-1 {
+  value = module.vpc.subnets["${var.region-name-1}/${var.username}-sandbox-subnet-region-1"].self_link
 }
 
-output sandbox-subnet-west3-cidr {
-  value = module.vpc.subnets["us-west3/${var.username}-sandbox-subnet-west3"].ip_cidr_range
+output sandbox-subnet-region-1-cidr {
+  value = module.vpc.subnets["${var.region-name-1}/${var.username}-sandbox-subnet-region-1"].ip_cidr_range
 }
 
-output sandbox-subnet-central1 {
-  value = module.vpc.subnets["us-central1/${var.username}-sandbox-subnet-central1"].self_link
+output sandbox-subnet-region-2 {
+  value = module.vpc.subnets["${var.region-name-2}/${var.username}-sandbox-subnet-region-2"].self_link
 }
 
-output sandbox-subnet-central1-cidr {
-  value = module.vpc.subnets["us-central1/${var.username}-sandbox-subnet-central1"].ip_cidr_range
+output sandbox-subnet-region-2-cidr {
+  value = module.vpc.subnets["${var.region-name-2}/${var.username}-sandbox-subnet-region-2"].ip_cidr_range
 }
 
-output sandbox-subnet-east4 {
-  value = module.vpc.subnets["us-east4/${var.username}-sandbox-subnet-east4"].self_link
+output sandbox-subnet-region-3 {
+  value = module.vpc.subnets["${var.region-name-3}/${var.username}-sandbox-subnet-region-3"].self_link
 }
 
-output sandbox-subnet-east4-cidr {
-  value = module.vpc.subnets["us-east4/${var.username}-sandbox-subnet-east4"].ip_cidr_range
+output sandbox-subnet-region-3-cidr {
+  value = module.vpc.subnets["${var.region-name-3}/${var.username}-sandbox-subnet-region-3"].ip_cidr_range
 }
