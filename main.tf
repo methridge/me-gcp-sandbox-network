@@ -1,5 +1,5 @@
 provider "google" {
-  version = ">= 3.19"
+  version = ">= 3.36"
 }
 
 provider "null" {
@@ -7,7 +7,7 @@ provider "null" {
 }
 
 provider "random" {
-  version = ">= 2.2"
+  version = ">= 2.3"
 }
 
 module "vpc" {
