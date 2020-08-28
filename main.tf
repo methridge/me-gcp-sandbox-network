@@ -2,6 +2,14 @@ provider "google" {
   version = ">= 3.19"
 }
 
+provider "null" {
+  version = ">= 2.1"
+}
+
+provider "random" {
+  version = ">= 2.2"
+}
+
 module "vpc" {
   source       = "terraform-google-modules/network/google"
   version      = ">= 2.3"
