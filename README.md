@@ -29,15 +29,14 @@ sandbox. Regions and their subnets are specified in an object map.
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.15 |
-| google | ~> 3.0 |
-| google-beta | ~> 3.0 |
+| terraform | >= 0.15 |
+| google | >= 3.5 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| google | 3.70.0 |
+| google | 3.71.0 |
 
 ## Modules
 
